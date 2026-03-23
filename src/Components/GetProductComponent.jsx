@@ -43,7 +43,7 @@ const GetProductComponent = () => {
             {/* map/loop over the product array to access one at a time */}
 
             {products.map((product) => (
-                <div className="col-md-3 justiy-content-center mb-4">
+                <div className="col-md-3 justiy-content-center mb-4" >
                     <div className="card shadow -margin">
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
 

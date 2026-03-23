@@ -114,7 +114,7 @@ const SignUpComponent = () => {
                         <Link to="/signin"> Already have an account? Sign In</Link>
 
 
-                    </fieldset>
+                    </fieldset >
                 </form>
             </div>
         </div>

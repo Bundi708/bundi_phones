@@ -62,7 +62,7 @@ const AddProductComponent = () => {
                 <h2>Add product</h2>
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-warning">{loading}</h5>
-                <h5 className="text-success">{success}</h5>
+                <h5 className="text-success">{success} </h5>
 
                 <form onSubmit={handleSubmit}>
                     <fieldset>

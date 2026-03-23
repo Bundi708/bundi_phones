@@ -33,7 +33,7 @@ const Navbar = () => {
                 </div>
                 ) : (
                     <div className="navbar-nav ms-auto">
-                    <Link className="nav-link" to="/signin">Sign In</Link>
+                    <Link className="nav-link" to="/signin">Sign In </Link>
                     <Link className="nav-link" to="/signup">Sign Up</Link>
                 </div>
                 

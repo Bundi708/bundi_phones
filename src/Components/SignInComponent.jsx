@@ -60,11 +60,11 @@ const SignInComponent =()=>{
 
     }
     return (
-        <div className="row justify-content-center mt-4">
+        <div className="row justify-content-center mt-4"> 
              <Navbar/>
             <div className="col-md-6 card shadow p-4">
                 <h2>Sign In</h2>
-                <h5 className="text-warning">{loading}</h5>
+                <h5 className="text-warning">{loading} </h5>
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-success">{success}</h5>
                 <form onSubmit={handleSubmit}>
