@@ -52,7 +52,7 @@ const GetProductComponent = () => {
                             <p className="text-muted">{product.product_description}</p>
                             <b className="text-warning">{product.product_cost}</b>
                             <br />
-                            <button className="btn btn-dark" onClick={() => { navigator("/makepayment", {state: {product}}) }}>Purchase Now</button>
+                            <button className="btn btn-dark" onClick={() => { navigator("/makepayment",{state: {product}}) }}>Purchase Now</button>
                         </div>
                     </div>
                 </div>
