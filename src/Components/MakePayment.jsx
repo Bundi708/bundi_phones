@@ -62,7 +62,8 @@ const MakePaymentsComponent = () => {
                         className="form-control"
                         readonly
                         value={120000}
-                        placeholder="Enter amount"/>
+                        placeholder="Enter amount"
+                        hidden/>
 
                     <br />
                     <input type="text"
