@@ -34,6 +34,9 @@ const GetProductComponent = () => {
     };
 
     useEffect(() => { getProducts(); }, [])
+    const handlesearch = (search_word) =>{
+        
+    }
     return (
         <div className="row">
              <Navbar/>
