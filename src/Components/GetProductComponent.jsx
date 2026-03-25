@@ -8,6 +8,19 @@ const GetProductComponent = () => {
     let [products, setProducts] = useState([])
     let [loading, setLoading] = useState("");
     let [error, setError] = useState("");
+    let [search_word, setSearchWord] = useState("");
+    let [filterd_products, setFilterdProducts] =useState([])
+    let [tecno,setTecno] = useState([]);
+    let [samsung,setSamsung] = useState([]);
+    let [redmi,setRedmi] =useState([]);
+    let [infinix,setInfinix] =useState([]);
+    let [oppo,setOppo] =useState([]);
+    let [vivo,setVivo] =useState([]);
+    let [nokia,setNokia] =useState([]);
+    let [huawei,setHuawei] =useState([]);
+
+
+
 
     // Base url for image location
     const img_url = "https://bundi.alwaysdata.net/static/images/"
@@ -35,6 +48,9 @@ const GetProductComponent = () => {
 
     useEffect(() => { getProducts(); }, [])
     const handlesearch = (search_word) =>{
+        let filterd =products.filter((product) =>
+        product.product_name.toLowerCase().includes(search_word.toLowerCase()),);
+        setFilterdProducts(filterd);
         
     }
     return (

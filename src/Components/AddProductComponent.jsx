@@ -108,7 +108,7 @@ const AddProductComponent = () => {
                             <option value="infinix">infinix</option>
                             <option value="oppo">oppo</option>
                             <option value="vivo">vivo</option>
-                            <option value="Huawei">Huawei</option>
+                            <option value="huawei">Huawei</option>
                         </select>
                         <label htmlFor="" className="form-label">Product image</label>
 
