@@ -22,14 +22,17 @@ const GetProductComponent = () => {
 
 
 
+     let navigator = useNavigate();
+
     // Base url for image location
     const img_url = "https://bundi.alwaysdata.net/static/images/"
 
-    let navigator = useNavigate();
+   
 
     // function to fetch products from the server
 
     const getProducts = async () => {
+        console.log("getting products")
         setError("");
         setLoading("Fetch products. Please wait...")
 
@@ -39,6 +42,11 @@ const GetProductComponent = () => {
             if (response.status === 200) {
                 setLoading("");
                 setProducts(response.data);
+
+                let oppo_bundi = response.data.filter(
+                    (product)=> product.product_category ==="oppo",
+                );
+                setOppo(oppo_bundi)
             }
         } catch (error) {
             setLoading("")
@@ -52,7 +60,11 @@ const GetProductComponent = () => {
         product.product_name.toLowerCase().includes(search_word.toLowerCase()),);
         setFilterdProducts(filterd);
         
+   
     }
+     useEffect(()=>{
+        handlesearch(search_word);
+    },[search_word]);  
     return (
         <div className="row">
              <Navbar/>
@@ -61,7 +73,7 @@ const GetProductComponent = () => {
             <h5 className="text-danger">{error}</h5>
             {/* map/loop over the product array to access one at a time */}
 
-            {products.map((product) => (
+            {tecno.map((product) => (
                 <div className="col-md-3 justiy-content-center mb-4" >
                     <div className="card shadow -margin">
                         <img src={img_url + product.product_image} alt="" className="product_img mt-4" />
