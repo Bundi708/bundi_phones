@@ -42,11 +42,17 @@ const GetProductComponent = () => {
             if (response.status === 200) {
                 setLoading("");
                 setProducts(response.data);
-
-                let oppo_bundi = response.data.filter(
-                    (product)=> product.product_category ==="oppo",
+                <div className="shadow md-4 bg-dark text-white">tecno phones</div>
+                let tecno = response.data.filter(
+                    (product)=> product.product_category ==="tecno",
                 );
-                setOppo(oppo_bundi)
+                setTecno(tecno)
+
+
+                let xiaomi = response.data.filter(
+                    (product)=> product.product_category ==="xiaomi",
+                );
+                setRedmi(xiaomi)
             }
         } catch (error) {
             setLoading("")
@@ -72,6 +78,21 @@ const GetProductComponent = () => {
             <h5 className="text-warning">{loading}</h5>
             <h5 className="text-danger">{error}</h5>
             {/* map/loop over the product array to access one at a time */}
+
+            <div className="row justify-content-center my-3">
+                <div className="col-md-3">
+                    <div className="form-floating">
+                        <input
+                        type= "text"
+                        className="form-control"
+                        id="searchInput"
+                        placeholder="search a phone"
+                        value={search_word}
+                        onChange={(e) => setSearchWord(e.target.value)} />
+                        <label htmlFor="searchInput">sear</label>
+                    </div>
+                </div>
+            </div>
 
             {tecno.map((product) => (
                 <div className="col-md-3 justiy-content-center mb-4" >
